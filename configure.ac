@@ -2,8 +2,13 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([FULL-PACKAGE-NAME], [VERSION], [BUG-REPORT-ADDRESS])
-AC_CONFIG_SRCDIR([Arduino/SendTo_RFM69/utils.h])
+
+
+AC_INIT([RFM_ArduinoPi], [0.1.0])
+AC_CONFIG_SRCDIR([bentemp/hello.cpp])
+AM_INIT_AUTOMAKE
+
+AC_CONFIG_SRCDIR([bentemp/hello.cpp])
 AC_CONFIG_HEADERS([config.h])
 
 # Checks for programs.
@@ -28,6 +33,5 @@ AC_TYPE_UINT8_T
 # Checks for library functions.
 AC_CHECK_FUNCS([gettimeofday select])
 
-AC_CONFIG_FILES([RaspPi/Makefile
-                 bentemp/Makefile])
-AC_OUTPUT
+# AC_CONFIG_FILES([])
+AC_OUTPUT(Makefile bentemp/Makefile)
